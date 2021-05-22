@@ -1,0 +1,125 @@
+.feature-style-two .single-feature-style-two {padding-left: 65px;padding-right: 65px;}
+
+@media (max-width: 375px) {
+  .section-one {
+    .banner-content h3 {
+      font-size: 50px;
+      line-height: 60px;
+    }
+  }
+}
+
+
+@media (max-width: 415px) {
+  .section-one {
+    .banner-content {
+      a.banner-btn {
+        &.style-two {
+          margin-left: 0px !important;
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  .footer {
+    background: $header-color;
+    height: 500px;
+    padding-top: 70px;
+    h3 {
+      font-size: 30px;
+    }
+    .about-us-btn-group {
+      height: auto;
+      position: inherit;
+      width: 100%;
+      input {
+        position: inherit;
+        margin-bottom: 20px;
+      }
+      a {
+        position: inherit;
+      }
+    }
+    .social-medial, .footer-bottom {
+      background: $header-color;
+    }
+  }
+
+}
+
+@media (max-width: 800px) {
+  .section-one .banner-content {
+    padding-top: 0;
+    margin-bottom: 50px;
+  }
+  .section-one .text-right {
+    text-align: center;
+  }
+
+  .section-two {
+    padding-bottom: 90px;
+
+    .single-feature-style-two {
+      margin-bottom: 30px;
+    }
+
+    .feature-style-two-content {
+      margin-bottom: 50px;
+    }
+  }
+  .team-style-one .single-team-style-one {
+    margin-bottom: 30px;
+  }
+  .section-one .theme-container {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-one .banner-content p br,
+  .app-screenshot-style-two .owl-carousel::before {
+    display: none;
+  }
+  .section-two  {
+    .single-feature-style-two {
+      padding-left: 65px;
+      padding-right: 65px;
+    }
+    .feature-style-two-content h3 br {
+      display: none;
+    }
+  }
+  .app-screenshot-style-two .owl-theme .owl-dots {
+    margin-top: 20px;
+  }
+}
+
+// Bootstrap media
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+  .section-one {
+    overflow: visible !important;
+    height: 1080px !important;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .section-one .theme-container img {
+    width: 130% !important;
+  }
+}

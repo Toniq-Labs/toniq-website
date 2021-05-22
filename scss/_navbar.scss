@@ -1,0 +1,126 @@
+// Styling for the navbar
+#mainNav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: transparent !important;
+  @include heading-font;
+  .navbar-brand {
+    color: $white;
+  }
+  .social-icons {
+    a {
+      color: #ffffff;
+      line-height: 40px;
+      font-size: 14pt;
+      font-weight: 400;
+      margin: 0 10px 5px 0;
+      &:hover, &:active, &:focus {
+        color:#227b7e !important;
+      }
+    }
+  }
+  .navbar-nav {
+    margin-top: 1rem;
+    letter-spacing: 0.0625rem;
+    li.nav-item {
+      a.nav-link {
+        font-size: 11pt;
+        text-transform: capitalize;
+        color: $white;
+        &:hover {
+          color: $secondary;
+        }
+        &:active {
+          color: $secondary;
+        }
+        &.active {
+          color: $secondary;
+        }
+      }
+    }
+  }
+  .navbar-toggler {
+    font-size: 200%;
+    padding: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.0) !important;
+    border: 0 !important;
+  }
+  .navbar-toggler:hover, .navbar-toggler:active, .navbar-toggler:focus{
+    border: 0 !important;
+    outline: 0 !important;
+  }
+}
+@media(min-width:992px) {
+  #mainNav {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    background-color: transparent !important;
+    .navbar-brand {
+      font-size: 2em;
+      -webkit-transition: font-size 0.3s;
+      -moz-transition: font-size 0.3s;
+      transition: font-size 0.3s;
+    }
+    .bar-nav {
+      margin-top: 0;
+    }
+    .navbar-nav > li.nav-item > a {
+      font-weight: 400;
+      padding: 15px 25px;
+    }
+  }
+  #mainNav.navbar-shrink {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    .navbar-brand {
+      font-size: 1.5em;
+    }
+  }
+}
+
+#mainNav.showNav {
+  background-color: $header-color !important;
+}
+
+.navbar-collapse.collapse.show, .navbar-collapse.collapsing {
+  background: #ffffff !important;
+  li.nav-item a.nav-link {
+    font-weight: 300;
+    color: #555556 !important;
+    padding: 20px 30px;
+    text-transform: uppercase !important;
+  }
+  li.nav-item a.nav-link.active {
+    color: #ffffff !important;
+    font-weight: 600;
+  }
+  .social-icons {
+    display: none;
+  }
+}
+
+@media(max-width: 992px) {
+  #mainNav {
+    .navbar-nav li.nav-item a.nav-link.active {
+      background: $header-color;
+      color: #ffffff !important;
+      &:active,
+      &:focus,
+      &:hover {
+        background: $header-color;
+        color: #ffffff !important;
+      }
+    }
+    .navbar-nav > li.nav-item > a.nav-link {
+      &:active,
+      &:focus,
+      &:hover {
+        background: $header-color;
+        color: #ffffff !important;
+      }
+    }
+  }
+}
