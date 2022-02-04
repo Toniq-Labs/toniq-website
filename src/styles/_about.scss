@@ -1,0 +1,30 @@
+.about-section {
+  .staff-member {
+    max-width: 350px;
+    margin: auto;
+    img {
+      margin-bottom: 2rem;
+    }
+    a {
+      display: inline-block;
+      margin: 1rem;
+    }
+    svg {
+      @include rfs(2rem, height);
+
+      path {
+        fill: $primary;
+      }
+    }
+    p {
+      padding-top: 1rem;
+      line-height: 30px;
+    }
+  }
+
+  .staff-member__social a:hover {
+    svg path {
+      fill: $success;
+    }
+  }
+}

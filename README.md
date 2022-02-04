@@ -1,2 +1,1 @@
-# toniq-website
-Official ToniqLabs Website
+# toniq-labs

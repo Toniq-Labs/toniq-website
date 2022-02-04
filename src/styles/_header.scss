@@ -1,0 +1,42 @@
+.site-header {
+  background-image: url(../images/backgrounds/header-bg-cropped.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 75% 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -1px;
+
+  &__content {
+    max-width: 700px;
+    margin-top: -3rem;
+    padding: 1rem;
+  }
+  h1 {
+    text-shadow: 0 0 8px rgba(43, 237, 230, 0.3);
+    color: #ffffff;
+    @include font-size(4.5rem);
+    font-weight: 300;
+    text-align: center;
+    font-weight: 300;
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  p {
+    max-width: 400px;
+    margin: 3rem auto;
+    text-shadow: 0 0 8px rgba(43, 237, 230, 0.3);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+  }
+  .btn {
+    margin: 0.5rem;
+  }
+}

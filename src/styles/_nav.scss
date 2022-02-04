@@ -1,0 +1,44 @@
+.navbar-nav {
+  @include media-breakpoint-up(lg) {
+    border-left: 1px solid #114143;
+    margin-left: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  @include media-breakpoint-up(lg) {
+    padding: 1rem;
+  }
+}
+
+.nav__icons {
+  display: flex;
+  margin-right: -0.5rem;
+
+  a {
+    margin: 0.5rem;
+    display: block;
+
+    svg {
+      height: 1.5rem;
+      path {
+        fill: #fff;
+      }
+    }
+
+    &:hover svg path {
+      fill: $success;
+    }
+  }
+
+  @include media-breakpoint-down(xxl) {
+    display: none;
+  }
+}
+
+.navbar-toggler {
+  border: 0;
+  outline: none;
+  box-shadow: none !important;
+}

@@ -1,0 +1,203 @@
+body {
+  line-height: 30px;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.page-section {
+  @include padding(7.5rem 0);
+}
+
+.section-heading {
+  color: $primary;
+  @include font-size(44px);
+  font-weight: 700;
+  @include margin-bottom(5.25rem);
+}
+
+.section-sub-heading {
+  color: $secondary;
+  @include font-size(18px);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.86px;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  min-width: 170px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  line-height: unset;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 1rem) 0,
+    100% 1rem,
+    100% 100%,
+    1rem 100%,
+    0 calc(100% - 1rem)
+  );
+}
+.follow-link {
+  font-weight: bold;
+  display: block;
+  svg {
+    height: 1.5rem;
+    margin-left: 1rem;
+    path {
+      fill: $primary;
+    }
+  }
+
+  a:hover svg path {
+    fill: $success;
+  }
+}
+
+.product-box {
+  background-color: #fff;
+  padding: 3rem 1.5rem;
+  height: 100%;
+  position: relative;
+
+  &--full {
+    padding: 4rem 0;
+  }
+  .follow-link {
+    margin-top: 3rem;
+  }
+  &:after,
+  &:before {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    background: $body-bg;
+    transform: rotate(45deg);
+    position: absolute;
+  }
+
+  &:before {
+    top: -1rem;
+    left: -1rem;
+  }
+  &:after {
+    bottom: -1rem;
+    right: -1rem;
+  }
+}
+
+.product-box__img-wrapper {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.philosophy__box {
+  background-color: #fff;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  height: 100%;
+  position: relative;
+
+  * {
+    z-index: 5;
+    position: relative;
+  }
+
+  &::before {
+    content: "";
+    background: #10222e;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform: scaleY(0);
+    transition: all 0.5s;
+    transform-origin: 50% 0;
+    z-index: 0;
+  }
+
+  &:hover {
+    &::before {
+      transform: scaleY(1);
+    }
+    color: #fff;
+  }
+
+  svg {
+    height: 68px;
+  }
+
+  h4 {
+    margin: 2rem 0;
+  }
+}
+
+$button-theme-colors: (
+  "primary": $primary,
+  "success": $success,
+);
+
+@each $color, $value in $button-theme-colors {
+  .btn-outline-#{$color},
+  .btn-#{$color} {
+    text-shadow: 0 0 8px rgba($value, 0.3);
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+
+    &:before {
+      display: block;
+      position: absolute;
+      top: 0px;
+      left: 0;
+      height: 100%;
+      width: 0px;
+      z-index: -1;
+      content: "";
+      background: $success;
+      transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+    }
+
+    &:hover {
+      border-color: $success;
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
+  .btn-#{$color}::before {
+    background: $success;
+  }
+}
+
+.toniq-game-studio {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+  img,
+  .btn {
+    margin: 0.5rem 0;
+  }
+  img {
+    margin-right: 1rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
